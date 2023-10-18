@@ -1,0 +1,52 @@
+.button {
+    &__default {
+        font-size: .8vw;
+        background-color: #c1b7e0;
+        width: fit-content;
+        padding: .3vw;
+        border-radius: .3vw;
+        cursor: pointer;
+        transition: .2s;
+        border: none;
+        border: 1px solid transparent;
+
+        &:hover {
+            filter: brightness(110%);
+            border: 1px solid #c1b7e0;
+            background-color: transparent;
+            color: #c1b7e0;
+            transition: .4s;
+        }
+
+    }
+
+    &__svg {
+        height: 1.5vw;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .button {
+        &__default {
+            font-size: 4vw;
+            background-color: #c1b7e0;
+            width: fit-content;
+            padding: 3vw;
+            border-radius: 1.5vw;
+            cursor: pointer;
+            transition: .2s;
+            border: none;
+
+            &:hover {
+                filter: brightness(110%);
+                transition: .3s;
+            }
+
+        }
+
+        &__svg {
+            height: 8vw;
+            padding: 1vw;
+        }
+    }
+}

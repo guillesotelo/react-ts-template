@@ -1,13 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import App from './App';
+import 'react-toastify/dist/ReactToastify.css';
+import { Toaster } from 'react-hot-toast';
+import ReactGA from 'react-ga4';
+const TRACKING_ID = "G-";
+ReactGA.initialize(TRACKING_ID);
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
+const isMobile = window.screen.width <= 768
+
+const toastOptions = {
+  style: {
+    marginTop: isMobile ? '20vw' : '10vw',
+  }
+}
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Toaster toastOptions={toastOptions} />
     <App />
-  </React.StrictMode>
+  </BrowserRouter>,
+  document.getElementById('root')
 );

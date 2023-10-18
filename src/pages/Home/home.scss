@@ -1,0 +1,16 @@
+.home {
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 5vw 0 30vw 0;
+    }
+
+}
+
+@media only screen and (max-width: 640px) {
+    .home {
+        &__container {
+            padding: 16vw 0 60vw 0;
+        }
+    }
+}
